@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarasavi Library - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="auth-page">
+  <div class="overlay"></div>
+
+  <main class="login-card">
+    <section class="login-form-panel">
+      <div class="brand">
+        <div class="brand-icon">📚</div>
+        <div>
+          <h1>Sarasavi Library</h1>
+          <p>Management System</p>
+        </div>
+      </div>
+
+      <h2>Welcome Back</h2>
+      <p class="subtext">Sign in to continue to the library system.</p>
+
+      <form id="loginForm" novalidate>
+        <label for="username">Username</label>
+        <div class="input-wrap">
+          <span>👤</span>
+          <input id="username" type="text" placeholder="Enter username" autocomplete="username" />
+        </div>
+
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <span>🔒</span>
+          <input id="password" type="password" placeholder="Enter password" autocomplete="current-password" />
+          <button class="icon-btn" type="button" id="togglePassword" aria-label="Show password">👁</button>
+        </div>
+
+        <p id="loginMessage" class="message"></p>
+
+        <div class="button-row">
+          <button class="btn btn-primary" type="submit">Login</button>
+          <button class="btn btn-outline" type="button" id="exitBtn">Exit</button>
+        </div>
+      </form>
+
+      <!-- <div class="demo-box">
+        <strong>Demo login:</strong> admin / admin123
+      </div> -->
+    </section>
+
+    <section class="login-art-panel">
+      <div class="art-circle">📖</div>
+      <h3>Read • Learn • Grow</h3>
+      <p>Simple library management for books, loans, returns and reservations.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

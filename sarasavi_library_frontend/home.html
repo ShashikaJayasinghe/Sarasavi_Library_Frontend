@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarasavi Library - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <div class="brand compact">
+      <div class="brand-icon">📚</div>
+      <div>
+        <h1>Sarasavi Library</h1>
+        <p>Management System</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span id="welcomeUser">Welcome</span>
+      <button class="btn btn-outline small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">MAIN MENU</span>
+        <h2>Library Management Dashboard</h2>
+        <p>Select a function to continue.</p>
+      </div>
+      <div class="hero-icon">🏛️</div>
+    </section>
+
+    <section class="menu-grid">
+      <a class="menu-card" href="#" data-placeholder="User Registration">
+        <span class="menu-icon">👥</span>
+        <div><h3>User Registration</h3><p>Add and manage library members.</p></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="menu-card" href="registration.html">
+        <span class="menu-icon">📘</span>
+        <div><h3>Book Registration</h3><p>Add, update and remove books.</p></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="menu-card" href="#" data-placeholder="Loan Book">
+        <span class="menu-icon">📤</span>
+        <div><h3>Loan Book</h3><p>Issue books to registered members.</p></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="menu-card" href="#" data-placeholder="Return Book">
+        <span class="menu-icon">📥</span>
+        <div><h3>Return Book</h3><p>Receive returned books and update status.</p></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="menu-card" href="#" data-placeholder="Reservation">
+        <span class="menu-icon">🔖</span>
+        <div><h3>Reservation</h3><p>Reserve books for library members.</p></div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="menu-card" href="#" data-placeholder="Inquiry">
+        <span class="menu-icon">🔎</span>
+        <div><h3>Inquiry</h3><p>Search books, members and transactions.</p></div>
+        <span class="arrow">→</span>
+      </a>
+    </section>
+
+    <section class="dashboard-image">
+      <div class="image-text">
+        <span>“A library is a place where ideas begin.”</span>
+        <small>Sarasavi Library Management System</small>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

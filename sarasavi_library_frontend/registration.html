@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarasavi Library - Book Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <div class="brand compact">
+      <div class="brand-icon">📚</div>
+      <div>
+        <h1>Sarasavi Library</h1>
+        <p>Book Registration</p>
+      </div>
+    </div>
+    <a class="btn btn-outline small" href="home.html">← Home</a>
+  </header>
+
+  <main class="form-page">
+    <section class="form-card">
+      <div class="form-heading">
+        <div>
+          <span class="eyebrow">BOOK MANAGEMENT</span>
+          <h2>Book Registration</h2>
+          <p>Add a new book or update an existing record.</p>
+        </div>
+        <div class="book-badge">📖</div>
+      </div>
+
+      <form id="bookForm" class="book-form" novalidate>
+        <div class="field">
+          <label for="bookId">Book ID</label>
+          <input id="bookId" type="text" placeholder="e.g. BK001" />
+        </div>
+
+        <div class="field span-2">
+          <label for="bookName">Book Name</label>
+          <input id="bookName" type="text" placeholder="Enter book title" />
+        </div>
+
+        <div class="field span-2">
+          <label for="author">Author</label>
+          <input id="author" type="text" placeholder="Enter author name" />
+        </div>
+
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="">Select category</option>
+            <option>Fiction</option>
+            <option>Non-Fiction</option>
+            <option>Education</option>
+            <option>Science</option>
+            <option>Technology</option>
+            <option>History</option>
+            <option>Children</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="language">Language</label>
+          <select id="language">
+            <option value="">Select language</option>
+            <option>English</option>
+            <option>Sinhala</option>
+            <option>Tamil</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="pages">No. of Pages</label>
+          <input id="pages" type="number" min="1" placeholder="e.g. 250" />
+        </div>
+
+        <div class="field">
+          <label for="price">Price (LKR)</label>
+          <input id="price" type="number" min="0" step="0.01" placeholder="e.g. 1500.00" />
+        </div>
+
+        <div class="field">
+          <label for="publisher">Publisher</label>
+          <input id="publisher" type="text" placeholder="Publisher name" />
+        </div>
+
+        <div class="field">
+          <label for="status">Available Status</label>
+          <select id="status">
+            <option value="">Select status</option>
+            <option>Available</option>
+            <option>Unavailable</option>
+            <option>Reserved</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="location">Location</label>
+          <input id="location" type="text" placeholder="e.g. Rack A-12" />
+        </div>
+
+        <div class="field">
+          <label for="acquisitionDate">Acquisition Date</label>
+          <input id="acquisitionDate" type="date" />
+        </div>
+
+        <div class="field">
+          <label for="quantity">Book Quantity</label>
+          <input id="quantity" type="number" min="0" placeholder="e.g. 5" />
+        </div>
+
+        <p id="bookMessage" class="message span-2"></p>
+
+        <div class="form-actions span-2">
+          <button class="btn btn-primary" type="submit">Add Book</button>
+          <button class="btn btn-secondary" type="button" id="updateBook">Update</button>
+          <button class="btn btn-danger" type="button" id="deleteBook">Delete</button>
+          <button class="btn btn-outline" type="reset">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-card">
+      <div class="table-heading">
+        <div>
+          <span class="eyebrow">LOCAL DEMO DATA</span>
+          <h3>Registered Books</h3>
+        </div>
+        <input id="bookSearch" class="search-input" type="search" placeholder="Search books..." />
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Qty</th>
+            </tr>
+          </thead>
+          <tbody id="bookTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
